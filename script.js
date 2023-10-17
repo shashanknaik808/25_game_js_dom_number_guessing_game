@@ -43,4 +43,12 @@ const play = () => {
 };
 
 
+const init = () => {
+    console.log("Game Started");
+    answer = Math.floor(Math.random() * 100) + 1;
+    console.log(answer);
+};
+
+
 checkButton.addEventListener("click", play);
+window.addEventListener("load", init);
