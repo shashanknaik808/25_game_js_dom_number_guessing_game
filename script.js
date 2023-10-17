@@ -58,5 +58,13 @@ const init = () => {
 };
 
 
+guessInput.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        play();
+    }
+});
+
+
 checkButton.addEventListener("click", play);
 window.addEventListener("load", init);
