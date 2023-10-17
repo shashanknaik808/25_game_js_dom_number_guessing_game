@@ -47,6 +47,14 @@ const init = () => {
     console.log("Game Started");
     answer = Math.floor(Math.random() * 100) + 1;
     console.log(answer);
+
+    noOfGuesses = 0;
+    guessedNumsArr = [];
+    noOfGuessesRef.innerHTML = "No. Of Guesses: 0";
+    guessedNumsRef.innerHTML = "Guessed Numbers are: None";
+    guessInput.value = "";
+    hint.classList.remove("success", "error");
+
 };
 
 
