@@ -66,5 +66,14 @@ guessInput.addEventListener("keydown", (event) => {
 });
 
 
+restartButton.addEventListener("click", () => {
+    game.style.display = "grid";
+    restartButton.style.display = "none";
+    hint.innerHTML = "";
+    hint.classList.remove("success");
+    init();
+});
+
+
 checkButton.addEventListener("click", play);
 window.addEventListener("load", init);
