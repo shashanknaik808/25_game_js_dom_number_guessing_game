@@ -11,8 +11,15 @@ let answer, noOfGuesses, guessedNumsArr;
 
 
 const play = () => {
-    console.log("called the play");
-};
+    const userGuess = guessInput.value;
+    if (userGuess < 1 || userGuess > 100 || isNaN(userGuess)) {
+      alert("Please enter a valid number between 1 and 100.");
+      return;
+    }
+    guessedNumsArr.push(userGuess);
+    noOfGuesses += 1;
+    
+  };
 
 
 checkButton.addEventListener("click", play);
